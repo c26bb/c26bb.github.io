@@ -3,22 +3,24 @@
 
 <head>
 	<style type="text/css">
-		div{
-			width:75px;
-			height:75px;
-			background-color: red;
-			transition: 1s;
-		}
-
-		div:hover{
-			background-color: white;
-			transition: 1s;
-			transform: rotate(720deg);
-			border-radius: 50%;
-			transition: 1s;
 
 
-	</style>
+
+#ball{
+	height:550px ;
+	width:550px ;
+	background-image: url(https://image-cdn.essentiallysports.com/wp-content/uploads/ishowspeed-image-853x640.jpg);
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+console.log(event,clientX.event.clientY)
+
+ball.style.left = element.clientX - 50 + "px";
+
+ball.style.top = element.clienty - 50 + "px";
+
+</style>
 
 </head>
 
@@ -32,6 +34,8 @@
 <div></div>
 <div></div>
 <div></div>
+
+<div id = "ball"></div>
 
 
 

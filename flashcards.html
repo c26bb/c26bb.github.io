@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<style>
+
+#background{
+	background-color: black;
+}
+
+.title{
+text-decoration: none;
+color: black;
+font-family: courier;
+font-size: 30px;
+}	
+
+#box1{
+	width:225px;
+	height:225px;
+	border: 1px solid black;
+	background-size: contain;
+	
+}
+
+#box2{
+	width:225px;
+	height:225px;
+	border: 1px solid black;	
+	
+}
+
+#box3{
+	width:225px;
+	height:225px;
+	border: 1px solid black;
+	background-size: contain;	
+	
+}
+#box4{
+	width:225px;
+	height:225px;
+	border: 1px solid black;	
+	
+}
+#box5{
+	width:225px;
+	height:225px;
+	border: 1px solid black;
+	background-size: contain;	
+	
+}
+#box6{
+	width:225px;
+	height:225px;
+	border: 1px solid black;	
+	
+}
+
+.container{
+	display:inline-block;
+}
+
+p{
+background-color: black;
+		}
+
+</style>
+
+
+		
+</head>
+
+<body>
+<center>
+<div class =title>PluggnGuesser</div>
+
+<div id ="c1" class="container">
+	<div id ="box1"></div>
+	<div id ="box2">waiting...</div>
+</div>
+
+<div id="c2" class="container">
+	<div id ="box3"></div>
+	<div id ="box4">waiting...</div>
+</div>
+
+<div class="container">
+	<div id ="box5"></div>
+	<div id ="box6">waiting...</div>
+</div>
+
+<div id = "background">
+</div>
+
+</center>
+	
+<script type = "text/javascript">
+
+	var counter = -1;
+
+	var artist1 = ["Carti", "Lil Uzi Vert", "Yeat", "Lil Tecca"]
+	var photo1 = ["https://assets.vogue.com/photos/58f635f04447d6274ef764d0/master/pass/00-tout-playboi.jpg", "https://i1.sndcdn.com/artworks-000186329595-t8gqko-t500x500.jpg", "https://images.complex.com/complex/images/c_fill,dpr_auto,f_auto,q_auto,w_1400/fl_lossy,pg_1/eys5ntxw6zjcxijbdznf/yeat-what-you-need-to-know?fimg-ssr-default", "https://iscale.iheart.com/catalog/artist/32485049"]
+
+	var artist2 = ["Autmn!", "Destroy Lonely", "Ken Carson", "Summrs"]
+	var photo2 = ['https://assets.audiomack.com/autumn/7c6c897309e05027e323a4f3f2565c3f58fc9fae91d0301fc01a0d0fe2a73b3e.png', 'https://photos.bandsintown.com/large/12849129.jpeg', 'https://images.complex.com/complex/images/c_fill,dpr_auto,f_auto,q_auto,w_1400/fl_lossy,pg_1/qv5bggdts3lvdvoxmpwm/ken-carson-gunner-stahl-photo-1?fimg-ssr-default', 'https://i.scdn.co/image/ab6761610000e5eb2a54a4529da2a8b47ca2f8a9']
+	
+	var artist3 = ["Weiland", "Duwap Kaine", "KanKan", "Dom Corleo" ]
+	var photo3 = ["https://lastfm.freetls.fastly.net/i/u/ar0/9a841631019e511de29527c8f9ca7773.jpg", "https://upload.wikimedia.org/wikipedia/commons/f/f1/Duwap_Kaine.png", "https://i.pinimg.com/736x/ff/ee/f9/ffeef9ffa5ae186e22a678affa6fbb7a.jpg", "https://i1.sndcdn.com/artworks-uPouzZzXMYLIYSfp-Hh7mmQ-t500x500.jpg"]
+
+
+	
+box1.addEventListener("click", function(){
+	counter = counter +1;
+	
+	var number = Math.floor(Math.random()*4);
+	box1.style.backgroundImage = "url("+photo1[counter] + ")"
+
+	if (counter >= 3){counter = -1}
+
+	function wait(){
+	box2.innerText = artist1[counter]
+}
+	setTimeout(wait, 2500)	
+})
+box3.addEventListener("click", function(){
+	counter = counter +1;
+	
+	var number = Math.floor(Math.random()*4);
+	box3.style.backgroundImage = "url("+photo2[counter] + ")"
+
+	if (counter >= 3){counter = -1}
+
+	function wait(){
+	box4.innerText = artist2[counter]
+}
+	setTimeout(wait, 2500)	
+})
+
+box5.addEventListener("click", function(){
+	counter = counter +1;
+	
+	var number = Math.floor(Math.random()*4);
+	box5.style.backgroundImage = "url("+photo3[counter] + ")"
+
+	if (counter >= 3){counter = -1}
+
+	function wait(){
+	box6.innerText = artist3[counter]
+}
+	setTimeout(wait, 2500)	
+})
+</script>
+
+
+</body>
+
+</html>
