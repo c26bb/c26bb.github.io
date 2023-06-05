@@ -3,39 +3,44 @@
 
 <head>
 	<style type="text/css">
-
-
-
-#ball{
-	height:550px ;
-	width:550px ;
-	background-image: url(https://image-cdn.essentiallysports.com/wp-content/uploads/ishowspeed-image-853x640.jpg);
+.bug{
+	width:100px;
+	height:100px;
+	background-image: url(https://i.insider.com/57a4db38dd089551028b465b?width=1136&format=jpeg);
 	background-size: contain;
 	background-repeat: no-repeat;
+	position: absolute;
+	transition: 1s;
 }
 
-console.log(event,clientX.event.clientY)
-
-ball.style.left = element.clientX - 50 + "px";
-
-ball.style.top = element.clienty - 50 + "px";
 
 </style>
 
 </head>
 
 <body>
+<script type = "text/javascript">
+function ladybugs (){
+	var bug = document.createElement("div");
+	document.body.appendChild(bug);
+	bug.classList.add('bug')
+	
+	function move() {
+		bug.style.left = Math.random()*1000+ "px";
+		bug.style.top = Math.random()*1000+ "px";
+	}
 
-<div id ="bodhi"></div>
-<div></div>
-<div></div>
-<div></div>
-<div></div>
-<div></div>
-<div></div>
-<div></div>
+	setInterval(move, 500) 
+}
 
-<div id = "ball"></div>
+for(var i = 0; i<100; i=i +1){
+	ladybugs()
+
+}
+
+</script>
+
+<div id = "bug"></div>
 
 
 

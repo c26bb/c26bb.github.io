@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>NBA Leading Scorers Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .quiz-container {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f1f1f1;
+            border-radius: 5px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .question {
+            margin-bottom: 20px;
+        }
+
+        .input-field {
+            margin-bottom: 10px;
+        }
+
+        .submit-button {
+            text-align: center;
+        }
+
+        .message {
+            text-align: center;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="quiz-container">
+        <h1>NBA Leading Scorers Quiz</h1>
+        <div class="question">
+            <p>Fill in the blanks with the top ten leading scorers in NBA history:</p>
+            <ol>
+                <li>PTS: 38,652 |Lakers/Cavs/Heat<input type="text" class="input-field" id="player1"></li>
+                <li>PTS: 38,387 |Lakers/Bucks<input type="text" class="input-field" id="player2"></li>
+                <li>PTS: 36,928 |Jazz/Lakers<input type="text" class="input-field" id="player3"></li>
+                <li>PTS: 33,643 |Lakers<input type="text" class="input-field" id="player4"></li>
+                <li>PTS: 32,292 |Bulls/Wizards<input type="text" class="input-field" id="player5"></li>
+                <li>PTS: 31,560 |Mavericks<input type="text" class="input-field" id="player6"></li>
+                <li>PTS: 31,419 |Warriors/76ers/Lakers<input type="text" class="input-field" id="player7"></li>
+                <li>PTS: 28,596 |Lakers/Heat/Magic/Suns/Celtics/Cavs<input type="text" class="input-field" id="player8"></li>
+                <li>PTS: 28,289 |Nuggets/Knicks/Thunder/Blazers<input type="text" class="input-field" id="player9"></li>
+                <li>PTS: 27,409 |76ers<input type="text" class="input-field" id="player10"></li>
+            </ol>
+        </div>
+        <div class="submit-button">
+            <button onclick="checkAnswers()">Submit</button>
+        </div>
+        <div class="message" id="message"></div>
+    </div>
+
+    <script>
+        function checkAnswers() {
+            var players = [
+                "james" , 
+                "jabbar" , 
+                "malone", 
+                "bryant" , 
+                "jordan",
+                "nowitzki",
+                "chamberlain", 
+                "oneal" , 
+                "anthony", 
+                "malone" , 
+              
+            ];
+
+            var answers = [];
+            for (var i = 1; i <= 10; i++) {
+                var player = document.getElementById('player' + i).value.trim();
+                answers.push(player);
+            }
+
+            var correctCount = 0;
+            for (var j = 0; j < players.length; j++) {
+                if (answers.includes(players[j])) {
+                    correctCount++;
+                }
+            }
+
+            var message = document.getElementById('message');
+            if (correctCount === players.length) {
+                message.textContent = "Congratulations! You got all the answers correct.";
+            } else {
+                message.textContent = "You answered " + correctCount + " out of " + players.length + " correctly.";
+            }
+        }
+    </script>
+</body>
+</html>

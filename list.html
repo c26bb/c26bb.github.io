@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Shaking Images</title>
+    <style>
+      
+      img {
+        position: absolute;
+        background-size:contain;
+      background-repeat: no-repeat;
+        width: 100px;
+        height: 100px;
+      }
+    </style>
+  </head>
+  <body>
+   
+    <img src="https://i.ebayimg.com/images/g/NvwAAOSwgKdiWZv1/s-l500.png" id="image1">
+    <img src="https://images.ctfassets.net/a4rx79jcl3n1/139uoz1HBz6PsWh8pEqOCK/eced155325ccb92acf76962ca5d688e5/gsw-logo-1920.png" id="image2">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/e/eb/Philadelphia-76ers-Logo-1977-1996.png" id="image3">
+    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/7/76/Denver_Nuggets.svg/1200px-Denver_Nuggets.svg.png" id="image4">
+    <img src="https://content.sportslogos.net/logos/6/231/full/795.png" id="image5">
+    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/f/fb/Miami_Heat_logo.svg/1200px-Miami_Heat_logo.svg.png" id="image6">
+    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/2/24/Atlanta_Hawks_logo.svg/1200px-Atlanta_Hawks_logo.svg.png" id="image7">
+    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/8/8f/Boston_Celtics.svg/1200px-Boston_Celtics.svg.png" id="image8">
+    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/4/4a/Milwaukee_Bucks_logo.svg/1200px-Milwaukee_Bucks_logo.svg.png" id="image9">
+    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/b/bb/Los_Angeles_Clippers_%282015%29.svg/1200px-Los_Angeles_Clippers_%282015%29.svg.png" id="image10">
+    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/d/dc/Phoenix_Suns_logo.svg/1200px-Phoenix_Suns_logo.svg.png" id="image11">
+    <img src="https://upload.wikimedia.org/wikipedia/en/c/c2/Minnesota_Timberwolves_logo.svg" id="image12">
+    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/c/c7/SacramentoKings.svg/800px-SacramentoKings.svg.png" id="image13">
+    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/2/25/New_York_Knicks_logo.svg/800px-New_York_Knicks_logo.svg.png" id="image14">
+    <img src="https://1000logos.net/wp-content/uploads/2017/08/CAVS-Logo-2017.png" id="image15">
+
+
+  
+    <script>
+     
+      var images = document.getElementsByTagName("img");
+
+      
+      setInterval(function() {
+        
+        for (var i = 0; i < images.length; i++) {
+          
+          var x = Math.floor(Math.random() * window.innerWidth);
+          var y = Math.floor(Math.random() * window.innerHeight);
+
+          
+          images[i].style.left = x + "px";
+          images[i].style.top = y + "px";
+        }
+      }, 100);
+    </script>
+  </body>
+</html>

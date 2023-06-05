@@ -1,23 +1,43 @@
-</!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
-<title></title>
-<style type = "text/css">
-	body{
-		background-color: rgb(0, 71, 171);
-	}
-</style>
+	<title></title>
+
+	<style>
+		
+
+		#buggy{
+			width:100px;
+			height:100px;
+			background-size:contain;
+			background-repeat: no-repeat;
+			background-image:url(https://iheartcraftythings.com/wp-content/uploads/2022/02/Preview-31.jpg); 
+		}
+	</style>
 
 </head>
 <body>
-<script type="text/javascript">
-document.addEventListener('mousemove',function color(event){
-var r = 0
-var g = event.clientX
 
-var b = event.cclient.Y
-document.body.style.backgroundColor = "rgb("+ r +"," + g + "," "+b +"
+	<div id="buggy"></div>
+
+	<script type="text/javascript">
+		buggy.style.left = "0px";
+
+		 var x = parseInt(buggy.style.left);
+
+		document.addEventListener("keydown", function(event){
+			console.log(x)
+			x = x+10;
+
+			buggy.style.left = x +"px";
 })
-</script>
+
+
+	</script>
+
 </body>
 </html>
+
+
+
+
